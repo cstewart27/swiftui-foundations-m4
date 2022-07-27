@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeListView: View {
     
     @EnvironmentObject var model:RecipeModel
+    @State var bindingVar: Double = 0.0
  
     var body: some View {
         
@@ -44,5 +45,7 @@ struct RecipeListView: View {
 struct RecipeListView_Previews: PreviewProvider {
     static var previews: some View {
         RecipeListView()
+            .environmentObject(RecipeModel())
+
     }
 }
